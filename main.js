@@ -35,9 +35,9 @@ class Producto {
     
      }
 
-const producto1 = new Producto ('Camara Samsung', 12000)
-const producto2 = new Producto ('Auriculares JBL', 30000)
-
+const producto1 = new Producto ('Killka Salentein Wines Tinto Malbec', 1063)
+const producto2 = new Producto ('Killka Salentein Wines Chardonnay', 930)
+const producto3 = new Producto ('Killka Salentein Wines Blanco Malbec', 1261)
 
 
  producto1.sumarIva();
@@ -46,6 +46,7 @@ const producto2 = new Producto ('Auriculares JBL', 30000)
 
 console.log(producto1)
 console.log(producto2)
+console.log(producto3)
 
 
 
@@ -64,14 +65,14 @@ cantidad = prompt ('¿cuantos queres comprar?')
 
 switch (producto) 
 {
-case 'Camara Samsung':
-    precio = 12000;
+case 'Killka Salentein Wines Tinto Malbec':
+    precio = 1063;
     break;
-    case 'Auriculares JBL':
-    precio = 30000;
+    case 'Killka Salentein Wines Chardonnay':
+    precio = 930;
     break;
     case 'ambos':
-    precio = 42000
+    precio = 1993
     break;
     default: 
     alert('el producto no esta en stock!')
@@ -89,5 +90,39 @@ seguircomprando = confirm('¿queres agregar otro producto?')
 } while (seguircomprando);
 
 alert ('el toral de tu compra es:'+preciototal)
+
+
+const listadoProductos = alert("");
+let productoIngresado = parseInt(prompt("Ingrese el nombre del producto que desea agregar al carrito e ingrese T para calcular el total: "));
+
+const articulosCarrito = [];
+
+class Producto {
+  constructor (nombre, precio) {
+    this.nombre = nombre;
+    this.precio = precio;
+  }
+}
+
+
+const robot = new Producto ("", 8.4);
+const mono = new Producto ("", 7.6);
+const ciervo = new Producto ("", 5.9);
+const mariposas = new Producto ("", 3.2);
+const dragon = new Producto ("", 4.8);
+const chica3d = new Producto ("", 2.7);
+const harryPotter = new Producto ("", 3.5);
+const colibri = new Producto ("", 2.4);
+
+function pregunta () {
+  while (productoIngresado === Producto) {
+    return articulosCarrito.push(Producto);    
+  } if (productoIngresado === "T") {
+    return articulosCarrito.reduce((acumulador, producto) => acumulador + producto.precio, 0);
+  }
+}
+
+pregunta();
+console.log(articulosCarrito);
 
 
