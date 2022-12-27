@@ -89,7 +89,7 @@ seguircomprando = confirm('¿queres agregar otro producto?')
 
 } while (seguircomprando);
 
-alert ('el toral de tu compra es:'+preciototal)
+alert ('el total de tu compra es:'+preciototal)
 
 
 const listadoProductos = alert("");
